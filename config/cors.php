@@ -20,7 +20,7 @@ return [
 'allowed_methods' => ['*'],
 
 // UBAH DARI '*' JADI ALAMAT FRONTEND (Tanpa tanda slash di akhir)
-'allowed_origins' => ['http://localhost:3000'],
+'allowed_origins' => ['*'],
 
 'allowed_origins_patterns' => [],
 
