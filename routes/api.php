@@ -51,6 +51,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::put('/user/password', [ProfileController::class, 'updatePassword']);
     Route::post('/user/avatar', [ProfileController::class, 'updateAvatar']);
 
+    Route::post('/pets/{id}/cancel', [PetController::class, 'cancelDonation']);
+
 
     // --- ADMIN ROUTES ---
     Route::middleware('admin')->prefix('admin')->group(function () {
