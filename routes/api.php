@@ -20,6 +20,10 @@ use App\Http\Controllers\ProfileController;
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 
+Route::get('/email/verify/{id}/{hash}', [AuthController::class, 'verifyEmail'])
+    ->middleware(['signed'])
+    ->name('verification.verify');
+
 Route::get('/pets', [PetController::class, 'index']);
 Route::get('/pets/{id}', [PetController::class, 'show']);
 
